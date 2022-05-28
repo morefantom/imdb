@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">IMDB</string>
+
+    <string name="landing_desc_thumbnail">Thumbnail</string>
+    <string name="landing_label_title">Title</string>
+    <string name="landing_label_description">Description</string>
 </resources>
