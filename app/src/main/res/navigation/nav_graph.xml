@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.prathamesh.imdb.ui.landing.LandingFragment"
+        android:label="landing_fragment"
+        tools:layout="@layout/landing_fragment" >
+        <action
+            android:id="@+id/action_landingFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.prathamesh.imdb.ui.moviedetails.MovieDetailsFragment"
+        android:label="movie_details_fragment"
+        tools:layout="@layout/movie_details_fragment" />
+</navigation>
