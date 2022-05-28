@@ -19,8 +19,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "THE_MOVIE_DB_BASE_URL", "\"https://api.themoviedb.org/\""
+            buildConfigField "String", "THE_MOVIE_DB_API_KEY", "\"38a73d59546aa378980a88b645f487fc\""
+            buildConfigField "String", "THE_IMAGE_BASE_URL", "\"https://image.tmdb.org/t/p/w500/\""
+        }
+
+        debug {
+            buildConfigField "String", "THE_MOVIE_DB_BASE_URL", "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", "THE_MOVIE_DB_API_KEY", "\"38a73d59546aa378980a88b645f487fc\""
+            buildConfigField "String", "THE_IMAGE_BASE_URL", "\"https://image.tmdb.org/t/p/w500/\""
         }
     }
     compileOptions {
@@ -53,6 +60,7 @@ dependencies {
     def mockito_core = "4.4.0"
     def mockito_kotlin = "4.0.0"
     def okhttp = "5.0.0-alpha.2"
+    def pagination = "3.0.0-alpha03"
     def retrofit = "2.9.0"
 
     //androidx
@@ -75,6 +83,9 @@ dependencies {
 
     //Glide
     implementation "com.github.bumptech.glide:glide:$glide"
+
+    //paging3
+    implementation "androidx.paging:paging-runtime:$pagination"
 
     testImplementation "junit:junit:$junit"
     testImplementation "androidx.arch.core:core-testing:$androidx_core_testing"
